@@ -1,5 +1,6 @@
 import React, { memo, useEffect, useState } from 'react';
 import { Row, Col } from 'antd';
+import Economy from './components/Economy';
 import * as Api from '../services/api';
 
 function Home(props) {
@@ -7,7 +8,12 @@ function Home(props) {
   const [loading, setLoading] = useState(false);
 
   const handleNews = (articles) => {
-    console.log('ar', articles)
+    setLoading(false);
+    setNews({
+      world: articles[0]?.value.value, // é uma forma de dizer que só renderiza caso exista um valor
+      economy: articles[1]?.value.value,
+      technology: articles[2]?.value.value,
+    })
   }
 
   useEffect(() => {
@@ -20,6 +26,8 @@ function Home(props) {
     .then(handleNews);
   }, [])
 
+  if (loading) return <div>Carregando...</div>
+
   return (
     <div>
       <Row gutter={[16, 16]}>
@@ -31,6 +39,7 @@ function Home(props) {
       <Row gutter={[16, 16]}>
         <Col span={24} md={16}>
           <h2>Economy</h2>
+          <Economy values={news?.economy} />
         </Col>
       </Row>
       <hr />
