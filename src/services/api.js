@@ -5,9 +5,9 @@ const params = {
   }
 }
 
-const URL = 'http://localhost:3000';
+const URL = 'http://localhost:3000/api';
 
-const getNews = async (subject) => {
+export const getNews = async (subject) => {
   try {
     const fetchNews = await fetch(`${URL}/${subject}`, params);
     const responseNews = await fetchNews.json();
@@ -18,4 +18,13 @@ const getNews = async (subject) => {
   }
 }
 
-export default getNews;
+export const getNewsById = async (subject, id) => {
+  try {
+    const fetchNews = await fetch(`${URL}/${subject}/${id}`, params);
+    const responseNews = await fetchNews.json();
+    return responseNews;
+
+  } catch(err) {
+    console.log('Ocorreu um erro', err)
+  }
+};

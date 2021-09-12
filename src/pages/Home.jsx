@@ -1,6 +1,6 @@
 import React, { memo, useEffect, useState } from 'react';
 import { Row, Col } from 'antd';
-import Api from '../services/api';
+import * as Api from '../services/api';
 
 function Home(props) {
   const [news, setNews] = useState([]);
