@@ -1,6 +1,7 @@
 import React, { memo, useEffect, useState } from 'react';
 import { Row, Col } from 'antd';
 import Economy from './components/Economy';
+import Technology from './components/Technology';
 import * as Api from '../services/api';
 
 function Home(props) {
@@ -46,6 +47,7 @@ function Home(props) {
       <Row gutter={[16, 16]}>
         <Col span={24} md={16}>
           <h2>Technology</h2>
+          <Technology values={news?.technology} />
         </Col>
       </Row>
     </div>
