@@ -14,7 +14,7 @@ function Technology({ values }) {
   )
 
   const openPost = (id) => {
-    history.push(`tecnhology/${id}`)
+    history.push(`/tecnhology/${id}`)
   }
   
   const renderPost = (post, index) => {

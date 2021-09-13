@@ -14,7 +14,7 @@ function Economy({ values }) {
     <p dangerouslySetInnerHTML={createMarkup(description)} />
   
   const openPost = (id) => {
-    history.push(`economy/${id}`)
+    history.push(`/economy/${id}`)
   }
 
   const renderPost = (post, index) => {
