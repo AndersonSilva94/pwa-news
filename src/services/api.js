@@ -13,7 +13,7 @@ export const getNews = async (subject) => {
     const responseNews = await fetchNews.json();
     return responseNews;
 
-  } catch(err) {
+  } catch (err) {
     console.log('Ocorreu um erro', err)
   }
 }
@@ -24,7 +24,7 @@ export const getNewsById = async (subject, id) => {
     const responseNews = await fetchNews.json();
     return responseNews;
 
-  } catch(err) {
+  } catch (err) {
     console.log('Ocorreu um erro', err)
   }
 };

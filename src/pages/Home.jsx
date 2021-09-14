@@ -25,7 +25,7 @@ function Home(props) {
       Api.getNews('economy'),
       Api.getNews('technology')
     ])
-    .then(handleNews);
+      .then(handleNews);
   }, [])
 
   if (loading) return <div>Carregando...</div>
