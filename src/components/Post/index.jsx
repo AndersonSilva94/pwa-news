@@ -4,7 +4,6 @@ import { Row, Col } from 'antd'
 import * as Api from '../../services/api'
 import Actions from '../../pages/components/Actions'
 import { createMarkup } from '../../utils'
-import './style.css'
 
 function Post() {
   const { id, subject } = useParams()
