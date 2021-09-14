@@ -5,7 +5,7 @@ const params = {
   }
 }
 
-const URL = 'http://localhost:3000/api';
+const URL = "https://stormy-brook-79548.herokuapp.com/api";
 
 export const getNews = async (subject) => {
   try {
