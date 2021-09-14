@@ -72,6 +72,11 @@ function Post() {
           <hr />
           <p className="text" dangerouslySetInnerHTML={createMarkup(body)} />
         </Col>
+        <Col span={24} md={8} >
+          <Row gutter={[16, 16]}>
+            {news?.value?.map(renderPost)}
+          </Row>
+        </Col>
       </Row>
     </div>
   )
